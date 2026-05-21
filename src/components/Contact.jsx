@@ -39,7 +39,7 @@ export default function Contact() {
 
           <form action="https://formsubmit.co/harshp24vishwakarma@gmail.com" method="POST" className="space-y-5">
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://portfolio-ten-ivory-83.vercel.app" />
+            <input type="hidden" name="_next" value="https://portfolio-l65949eg9-harshvishwakarma24s-projects.vercel.app" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <label className="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] uppercase block">Name</label>
