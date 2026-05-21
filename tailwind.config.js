@@ -1,0 +1,46 @@
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        tertiary: '#7bd0ff',
+        'on-tertiary': '#00354a',
+        'tertiary-container': '#000c14',
+        surface: '#101415',
+        'surface-container': '#1d2022',
+        'surface-container-low': '#191c1e',
+        'surface-container-lowest': '#0b0f10',
+        'surface-container-high': '#272a2c',
+        'surface-bright': '#363a3b',
+        'surface-variant': '#323537',
+        'on-surface': '#e0e3e5',
+        'on-surface-variant': '#c4c7c7',
+        outline: '#8e9192',
+        'outline-variant': '#444748',
+        primary: '#c9c6c5',
+        'on-primary': '#313030',
+        secondary: '#bec6e0',
+        background: '#101415',
+        'on-background': '#e0e3e5',
+        'inverse-surface': '#e0e3e5',
+        'inverse-on-surface': '#2d3133',
+        error: '#ffb4ab',
+        'error-container': '#93000a',
+      },
+      fontFamily: {
+        display: ['Geist', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+        body: ['Inter', 'sans-serif'],
+      },
+      maxWidth: {
+        'max-width': '1200px',
+      },
+      spacing: {
+        'grid-gutter': '24px',
+        'section-gap': '100px',
+      },
+    },
+  },
+  plugins: [],
+}
