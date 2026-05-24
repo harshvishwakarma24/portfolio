@@ -3,7 +3,7 @@ const skillCategories = [
     category: 'Frontend',
     icon: 'devices',
     delay: 0,
-    skills: ['React.js', 'JavaScript (ES6+)', 'Tailwind CSS', 'HTML5 / CSS3'],
+    skills: ['React.js', 'JavaScript (ES6+)', 'HTML5 / CSS3'],
   },
   {
     category: 'Backend',
