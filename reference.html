@@ -1,769 +1,328 @@
-<!DOCTYPE html>
-<html class="dark scroll-smooth" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>HARSH.DEV | Architecting the Future</title>
+<!DOCTYPE html><html class="light" lang="en" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Vital Assurance | Your Blood is Someone's Second Chance</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "tertiary": "#7bd0ff",
-          "on-tertiary": "#00354a",
-          "tertiary-container": "#000c14",
-          "surface": "#101415",
-          "surface-container": "#1d2022",
-          "surface-container-low": "#191c1e",
-          "surface-container-lowest": "#0b0f10",
-          "surface-container-high": "#272a2c",
-          "surface-bright": "#363a3b",
-          "surface-variant": "#323537",
-          "on-surface": "#e0e3e5",
-          "on-surface-variant": "#c4c7c7",
-          "outline": "#8e9192",
-          "outline-variant": "#444748",
-          "primary": "#c9c6c5",
-          "on-primary": "#313030",
-          "secondary": "#bec6e0",
-          "background": "#101415",
-          "on-background": "#e0e3e5",
-          "inverse-surface": "#e0e3e5",
-          "inverse-on-surface": "#2d3133",
-          "error": "#ffb4ab",
-          "error-container": "#93000a",
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-background": "#0d1c2f",
+                    "on-error": "#ffffff",
+                    "outline": "#8d706c",
+                    "inverse-surface": "#233144",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#cce5ff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "primary-container": "#c0392b",
+                    "on-tertiary-fixed": "#001e31",
+                    "secondary": "#006b58",
+                    "on-tertiary-fixed-variant": "#004b73",
+                    "surface-tint": "#b02d21",
+                    "primary-fixed": "#ffdad5",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container-high": "#dde9ff",
+                    "on-secondary-fixed": "#002019",
+                    "on-secondary-container": "#00725e",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#e6eeff",
+                    "tertiary-fixed-dim": "#92ccff",
+                    "on-surface": "#0d1c2f",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#eff4ff",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#ccdbf4",
+                    "on-tertiary-container": "#dbecff",
+                    "secondary-fixed-dim": "#65dabc",
+                    "primary": "#9e2016",
+                    "tertiary": "#005683",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#410000",
+                    "surface": "#f8f9ff",
+                    "on-surface-variant": "#59413d",
+                    "tertiary-container": "#046fa7",
+                    "secondary-container": "#82f7d8",
+                    "outline-variant": "#e1bfb9",
+                    "surface-variant": "#d5e3fd",
+                    "on-primary-fixed-variant": "#8e130c",
+                    "on-secondary-fixed-variant": "#005142",
+                    "background": "#f8f9ff",
+                    "on-primary-container": "#ffe5e1",
+                    "inverse-primary": "#ffb4a9",
+                    "secondary-fixed": "#82f7d8",
+                    "surface-container-highest": "#d5e3fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "gutter": "32px",
+                    "section-gap": "80px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+            }
+          },
         },
-        fontFamily: {
-          "display": ["Geist", "sans-serif"],
-          "mono": ["JetBrains Mono", "monospace"],
-          "body": ["Inter", "sans-serif"],
-        },
-        maxWidth: { "max-width": "1200px" },
-        spacing: {
-          "grid-gutter": "24px",
-          "section-gap": "100px",
-        }
       }
-    }
-  }
-</script>
+    </script>
 <style>
-  *, *::before, *::after { box-sizing: border-box; }
-  body { background-color: #101415; color: #e0e3e5; overflow-x: hidden; font-family: 'Inter', sans-serif; }
-
-  /* Glass */
-  .glass-panel { background: rgba(25,28,30,0.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(142,145,146,0.1); transition: border-color 0.3s; }
-  .glass-panel:hover { border-color: rgba(123,208,255,0.25); }
-
-  /* Glows */
-  .neon-glow { box-shadow: 0 0 20px rgba(123,208,255,0.12); }
-  .neon-glow-strong { box-shadow: 0 0 40px rgba(123,208,255,0.3), 0 0 80px rgba(123,208,255,0.1); }
-  .text-glow { text-shadow: 0 0 20px rgba(123,208,255,0.5); }
-
-  /* Particles canvas */
-  #particles-canvas { position: fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:0.5; }
-
-  /* Cursor glow */
-  .cursor-glow {
-    position: fixed; width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(123,208,255,0.05) 0%, transparent 65%);
-    border-radius: 50%; pointer-events: none; z-index: 1;
-    transform: translate(-50%, -50%); mix-blend-mode: plus-lighter;
-    transition: left 0.08s, top 0.08s;
-  }
-
-  /* Splash */
-  #splash-screen { transition: transform 1s cubic-bezier(0.76,0,0.24,1), opacity 0.8s ease; }
-  .typing-cursor { display: inline-block; width: 3px; height: 0.85em; background: #7bd0ff; margin-left: 4px; vertical-align: text-bottom; animation: blink 0.75s step-end infinite; }
-  @keyframes blink { 50% { opacity: 0; } }
-
-  /* Float animation */
-  @keyframes float { 0%,100%{ transform: translateY(0) rotate(0deg); } 50%{ transform: translateY(-18px) rotate(1.5deg); } }
-  .floating { animation: float 6s ease-in-out infinite; }
-
-  /* Bounce */
-  @keyframes bounce-gentle { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
-  .bounce-gentle { animation: bounce-gentle 2s ease-in-out infinite; }
-
-  /* Scroll reveal */
-  .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
-  .reveal.active { opacity: 1; transform: translateY(0); }
-
-  /* Tech sphere bg glow */
-  .tech-sphere-glow {
-    background: radial-gradient(circle, rgba(123,208,255,0.18) 0%, transparent 70%);
-    filter: blur(30px);
-  }
-
-  /* Scrollbar hide */
-  .hide-scrollbar::-webkit-scrollbar { display: none; }
-  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-  /* Nav active link */
-  .nav-link { position: relative; }
-  .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: #7bd0ff; transition: width 0.3s; }
-  .nav-link:hover::after { width: 100%; }
-
-  /* Grid background for hero */
-  .hero-grid {
-    background-image: linear-gradient(rgba(123,208,255,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(123,208,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  /* Cert card left border gradient */
-  .cert-card { border-left: 2px solid #7bd0ff; position: relative; overflow: hidden; }
-  .cert-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(123,208,255,0.06) 0%, transparent 60%); }
-
-  /* Skill badge */
-  .skill-tag { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border: 1px solid rgba(123,208,255,0.2); color: #7bd0ff; border-radius: 4px; background: rgba(123,208,255,0.06); }
-
-  /* Mobile menu */
-  #mobile-menu { transition: transform 0.4s cubic-bezier(0.76,0,0.24,1), opacity 0.4s; }
-
-  /* Section number */
-  .sec-number { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(123,208,255,0.4); letter-spacing: 0.3em; }
-
-  /* Project image overlay */
-  .project-img-wrap { position: relative; overflow: hidden; }
-  .project-img-wrap img { transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), filter 0.5s; filter: grayscale(1) brightness(0.8); }
-  .project-card:hover .project-img-wrap img { transform: scale(1.06); filter: grayscale(0) brightness(1); }
-
-  /* Animated status dot */
-  @keyframes status-pulse { 0%,100%{ box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 50%{ box-shadow: 0 0 0 6px rgba(74,222,128,0); } }
-  .status-dot { animation: status-pulse 2s infinite; }
-
-  /* Magnetic btn base */
-  .mag-btn { transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1); display: inline-block; }
-
-  /* Form input dark style */
-  input, textarea {
-    background: rgba(11,15,16,0.6) !important;
-    border: 1px solid rgba(68,71,72,0.4) !important;
-    border-radius: 8px !important;
-    color: #e0e3e5 !important;
-    outline: none !important;
-    font-family: 'Inter', sans-serif;
-    transition: border-color 0.3s, box-shadow 0.3s !important;
-  }
-  input:focus, textarea:focus {
-    border-color: rgba(123,208,255,0.5) !important;
-    box-shadow: 0 0 0 3px rgba(123,208,255,0.08) !important;
-  }
-  input::placeholder, textarea::placeholder { color: rgba(196,199,199,0.35); }
-
-  @media (max-width: 768px) {
-    .hero-name-size { font-size: 52px; }
-  }
-</style>
+        .medical-glow {
+            box-shadow: 0 15px 30px -5px rgba(158, 32, 22, 0.05);
+        }
+        .step-connector::after {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background-color: #e1bfb9;
+            z-index: -1;
+        }
+        @media (max-width: 768px) {
+            .step-connector::after { display: none; }
+        }
+    </style>
 </head>
-<body class="overflow-hidden">
-
-<!-- ░░ SPLASH SCREEN ░░ -->
-<div class="fixed inset-0 z-[200] bg-[#0b0f10] flex items-center justify-center" id="splash-screen">
-  <div class="absolute inset-0 hero-grid opacity-50"></div>
-  <!-- Glow orbs -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full" style="background:radial-gradient(circle,rgba(123,208,255,0.07) 0%,transparent 70%)"></div>
-  <div class="text-center relative z-10 px-6">
-    <div class="sec-number mb-8 tracking-[0.5em]">PORTFOLIO 2025</div>
-    <h1 class="font-display text-[clamp(2.5rem,8vw,5.5rem)] font-bold tracking-[-0.04em] text-[#c9c6c5] leading-[1.05] mb-2" id="splash-name-el">
-      <span id="typed-text"></span><span class="typing-cursor" id="typed-cursor"></span>
-    </h1>
-    <p class="font-mono text-[11px] tracking-[0.5em] text-[#7bd0ff] uppercase opacity-0 transition-all duration-700 mt-6" id="splash-role-el">React &nbsp;•&nbsp; Django &nbsp;•&nbsp; React Native</p>
-    <div class="mt-20 opacity-0 transition-all duration-700 bounce-gentle" id="splash-cta-el">
-      <span class="material-symbols-outlined text-[#7bd0ff] text-4xl">keyboard_double_arrow_down</span>
-      <p class="font-mono text-[9px] text-[#8e9192] mt-1 tracking-[0.3em]">SCROLL TO ENTER</p>
-    </div>
-  </div>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- Urgency Banner -->
+<div class="bg-primary text-on-primary py-2 px-margin-mobile md:px-gutter text-center">
+<p class="font-label-md text-label-md uppercase tracking-wider">Critical Need: Type O- and B- blood units urgently required across our network.</p>
 </div>
-
-<!-- ░░ PARTICLES ░░ -->
-<canvas id="particles-canvas"></canvas>
-
-<!-- ░░ CURSOR GLOW ░░ -->
-<div class="cursor-glow" id="mouse-glow"></div>
-
-<!-- ░░ NAV ░░ -->
-<nav class="fixed top-0 left-0 right-0 z-50 h-16 opacity-0 transition-all duration-700" id="main-nav" style="background:rgba(16,20,21,0.6);backdrop-filter:blur(20px);border-bottom:1px solid rgba(68,71,72,0.15)">
-  <div class="max-w-[1200px] mx-auto px-6 flex justify-between items-center h-full">
-    <div class="font-display text-xl font-bold tracking-[-0.04em] text-[#c9c6c5]">HARSH<span class="text-[#7bd0ff]">.</span>DEV</div>
-    <div class="hidden md:flex items-center gap-8">
-      <a class="nav-link font-mono text-[11px] tracking-[0.12em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#about">About</a>
-      <a class="nav-link font-mono text-[11px] tracking-[0.12em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#projects">Work</a>
-      <a class="nav-link font-mono text-[11px] tracking-[0.12em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#skills">Tech</a>
-      <a class="nav-link font-mono text-[11px] tracking-[0.12em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#workflow">AI Stack</a>
-      <a href="#contact" class="mag-btn bg-[#7bd0ff] text-[#00354a] px-6 py-2 rounded-full font-mono text-[11px] font-bold tracking-[0.1em] uppercase hover:neon-glow-strong transition-all hover:scale-105 active:scale-95">Connect</a>
-    </div>
-    <button class="md:hidden text-[#c9c6c5]" id="mobile-menu-btn">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
-  </div>
-  <!-- Mobile menu -->
-  <div class="md:hidden hidden" id="mobile-menu" style="background:rgba(11,15,16,0.97);backdrop-filter:blur(20px);border-top:1px solid rgba(68,71,72,0.2)">
-    <div class="flex flex-col px-6 py-6 gap-5">
-      <a class="font-mono text-[11px] tracking-[0.2em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#about">About</a>
-      <a class="font-mono text-[11px] tracking-[0.2em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#projects">Work</a>
-      <a class="font-mono text-[11px] tracking-[0.2em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#skills">Tech</a>
-      <a class="font-mono text-[11px] tracking-[0.2em] text-[#c4c7c7] hover:text-[#7bd0ff] transition-colors uppercase" href="#workflow">AI Stack</a>
-      <a href="#contact" class="font-mono text-[11px] tracking-[0.2em] text-[#7bd0ff] uppercase">Connect →</a>
-    </div>
-  </div>
+<!-- TopNavBar -->
+<nav class="bg-surface sticky top-0 z-50 h-20 flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Witch</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary py-1 transition-all duration-200" href="#">Why Donate</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Process</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Eligibility</a>
+</div>
+<div class="flex items-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-primary-container active:scale-95 transition-all">
+                Find a Drive
+            </button>
+</div>
 </nav>
-
-<!-- ░░ MAIN ░░ -->
-<main class="relative z-10 pt-16">
-
-  <!-- HERO -->
-  <section class="min-h-[92vh] flex items-center justify-center px-6 relative overflow-hidden hero-grid" id="hero">
-    <div class="absolute inset-0" style="background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(123,208,255,0.04) 0%,transparent 70%)"></div>
-    <div class="max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-      <!-- Left: Text -->
-      <div class="reveal text-center lg:text-left z-20">
-        <div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
-          <div class="h-px w-8 bg-[#7bd0ff] opacity-60"></div>
-          <span class="font-mono text-[11px] tracking-[0.3em] text-[#7bd0ff] uppercase">System Architect</span>
-        </div>
-        <h2 class="font-display font-bold leading-[1.08] tracking-[-0.04em] mb-6" style="font-size:clamp(3rem,7vw,5.5rem)">
-          Harsh<br><span class="text-[#7bd0ff] text-glow">Vishwa</span>karma
-        </h2>
-        <p class="font-display text-xl md:text-2xl text-[#c4c7c7] font-semibold mb-5 max-w-xl mx-auto lg:mx-0">
-          React &amp; Django Developer
-        </p>
-        <p class="text-[#c4c7c7] text-base mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed opacity-70">
-          BSc IT graduate building clean, responsive, and modern web &amp; mobile applications using React, React Native, and Django.
-        </p>
-        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-          <a href="#projects" class="mag-btn bg-[#7bd0ff] text-[#00354a] px-8 py-4 rounded-lg font-mono text-[11px] font-bold tracking-[0.15em] uppercase hover:neon-glow-strong transition-all hover:-translate-y-1">View Projects</a>
-          <a href="#" class="mag-btn glass-panel text-[#c9c6c5] px-8 py-4 rounded-lg font-mono text-[11px] tracking-[0.15em] uppercase hover:-translate-y-1 transition-all">Resume ↗</a>
-          <a href="#contact" class="mag-btn px-8 py-4 text-[#7bd0ff] font-mono text-[11px] tracking-[0.15em] uppercase border border-[rgba(123,208,255,0.2)] rounded-lg hover:border-[rgba(123,208,255,0.6)] hover:-translate-y-1 transition-all">Contact</a>
-        </div>
-      </div>
-
-      <!-- Right: Card Visual -->
-      <div class="relative flex justify-center items-center reveal h-[480px]">
-        <div class="absolute w-[420px] h-[420px] tech-sphere-glow rounded-full pointer-events-none"></div>
-
-        <!-- Main Card -->
-        <div class="relative glass-panel w-72 h-96 rounded-2xl p-6 flex flex-col justify-between floating z-10 group overflow-hidden neon-glow">
-          <div class="absolute inset-0 bg-gradient-to-br from-[rgba(123,208,255,0.08)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="space-y-3 relative z-10">
-            <div class="w-10 h-1.5 bg-[rgba(123,208,255,0.4)] rounded-full"></div>
-            <div class="w-20 h-1 bg-[rgba(123,208,255,0.15)] rounded-full"></div>
-          </div>
-          <div class="flex flex-col items-center gap-4 relative z-10">
-            <span class="material-symbols-outlined text-[#7bd0ff] group-hover:scale-110 transition-transform duration-300" style="font-size:64px">terminal</span>
-            <p class="font-mono text-[11px] text-[#8e9192]">01001000 01 · 01101001</p>
-          </div>
-          <div class="flex justify-between relative z-10">
-            <div class="w-8 h-8 rounded-full border border-[rgba(123,208,255,0.25)] flex items-center justify-center">
-              <div class="w-2 h-2 rounded-full bg-[#7bd0ff] opacity-60"></div>
-            </div>
-            <div class="w-8 h-8 rounded-full border border-[rgba(123,208,255,0.25)] flex items-center justify-center">
-              <div class="w-2 h-2 rounded-full bg-[#7bd0ff] opacity-60"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Floating badges -->
-        <div class="absolute top-8 right-16 glass-panel p-4 rounded-xl floating" style="animation-delay:-1s">
-          <div class="font-mono text-[10px] text-[#7bd0ff] font-bold tracking-widest">REACT</div>
-        </div>
-        <div class="absolute bottom-16 left-8 glass-panel p-4 rounded-xl floating" style="animation-delay:-2.2s">
-          <div class="font-display text-base font-bold text-[#7bd0ff]">Django</div>
-        </div>
-        <div class="absolute top-1/2 -right-2 glass-panel p-4 rounded-xl floating" style="animation-delay:-3.5s">
-          <div class="font-mono text-[10px] text-[#7bd0ff] font-bold">Python</div>
-        </div>
-        <div class="absolute bottom-8 right-12 glass-panel px-4 py-3 rounded-xl floating" style="animation-delay:-0.5s">
-          <div class="font-mono text-[10px] text-[#8e9192]">React Native</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll hint -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
-      <div class="w-px h-12" style="background:linear-gradient(to bottom,transparent,#7bd0ff)"></div>
-      <span class="font-mono text-[9px] tracking-[0.3em] text-[#c4c7c7] uppercase">Scroll</span>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="py-[100px] px-6 max-w-[1200px] mx-auto" id="about">
-    <div class="flex flex-col md:flex-row gap-16">
-
-      <div class="md:w-1/3 reveal">
-        <div class="sec-number mb-4">01 //</div>
-        <h3 class="font-display text-[32px] font-bold text-[#c9c6c5] mb-6 tracking-[-0.02em]">About Me</h3>
-        <div class="w-16 h-0.5 bg-[#7bd0ff] mb-8 rounded-full"></div>
-        <p class="text-[#c4c7c7] leading-relaxed text-base mb-8 opacity-75">
-          I'm a forward-thinking developer dedicated to creating digital experiences that are as functional as they are beautiful. I love the intersection of elegant design and clean engineering.
-        </p>
-        <div class="glass-panel p-5 rounded-xl">
-          <p class="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] mb-3 uppercase">Current Status</p>
-          <p class="text-[#c9c6c5] font-medium flex items-center gap-3 text-sm">
-            <span class="w-2 h-2 bg-green-400 rounded-full status-dot flex-shrink-0"></span>
-            Available for hire
-          </p>
-        </div>
-      </div>
-
-      <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="glass-panel p-8 rounded-2xl reveal group" data-delay="100">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">school</span>
-          <h4 class="font-display text-xl font-semibold text-[#c9c6c5] mb-4">Academic Foundation</h4>
-          <p class="text-[#c4c7c7] text-sm leading-relaxed mb-5 opacity-75">
-            Bachelor of Science in Information Technology (BSc IT) — deep understanding of software lifecycles and modern computing.
-          </p>
-          <div class="font-mono text-[10px] text-[rgba(123,208,255,0.5)] uppercase tracking-widest">BSc IT Graduate</div>
-        </div>
-
-        <div class="glass-panel p-8 rounded-2xl reveal group" data-delay="200">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">rocket_launch</span>
-          <h4 class="font-display text-xl font-semibold text-[#c9c6c5] mb-4">Core Mission</h4>
-          <p class="text-[#c4c7c7] text-sm leading-relaxed mb-5 opacity-75">
-            Leveraging AI-augmented development to build scalable applications that solve real-world problems with elegance and efficiency.
-          </p>
-          <div class="font-mono text-[10px] text-[rgba(123,208,255,0.5)] uppercase tracking-widest">Focus: Scalability &amp; Impact</div>
-        </div>
-
-        <div class="glass-panel p-8 rounded-2xl reveal group" data-delay="300">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">code_blocks</span>
-          <h4 class="font-display text-xl font-semibold text-[#c9c6c5] mb-4">Development Style</h4>
-          <p class="text-[#c4c7c7] text-sm leading-relaxed mb-5 opacity-75">
-            Clean code, thoughtful architecture, and pixel-perfect UI. Every project is an opportunity to raise the bar.
-          </p>
-          <div class="font-mono text-[10px] text-[rgba(123,208,255,0.5)] uppercase tracking-widest">Clean · Scalable · Beautiful</div>
-        </div>
-
-        <div class="glass-panel p-8 rounded-2xl reveal group" data-delay="400">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">diversity_3</span>
-          <h4 class="font-display text-xl font-semibold text-[#c9c6c5] mb-4">Collaboration</h4>
-          <p class="text-[#c4c7c7] text-sm leading-relaxed mb-5 opacity-75">
-            Comfortable working in agile teams, communicating clearly, and delivering on time. Open to freelance and full-time opportunities.
-          </p>
-          <div class="font-mono text-[10px] text-[rgba(123,208,255,0.5)] uppercase tracking-widest">Open to Opportunities</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS / TECH ARSENAL -->
-  <section class="py-[100px] px-6" style="background:rgba(11,15,16,0.5)" id="skills">
-    <div class="max-w-[1200px] mx-auto">
-      <div class="text-center mb-16 reveal">
-        <div class="sec-number mb-4">02 //</div>
-        <h3 class="font-display text-[32px] font-bold text-[#c9c6c5] tracking-[-0.02em]">Technical Arsenal</h3>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-panel p-8 rounded-xl reveal hover:-translate-y-2 transition-all duration-300" data-delay="0">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">devices</span>
-          <h4 class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#c9c6c5] uppercase mb-6">Frontend</h4>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>React.js</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>JavaScript (ES6+)</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Tailwind CSS</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>HTML5 / CSS3</li>
-          </ul>
-        </div>
-
-        <div class="glass-panel p-8 rounded-xl reveal hover:-translate-y-2 transition-all duration-300" data-delay="100">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">database</span>
-          <h4 class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#c9c6c5] uppercase mb-6">Backend</h4>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Django / DRF</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Python</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>PostgreSQL / SQLite</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>REST API Architecture</li>
-          </ul>
-        </div>
-
-        <div class="glass-panel p-8 rounded-xl reveal hover:-translate-y-2 transition-all duration-300" data-delay="200">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">smartphone</span>
-          <h4 class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#c9c6c5] uppercase mb-6">Mobile</h4>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>React Native</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Expo Ecosystem</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Mobile Performance</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Cross-platform UX</li>
-          </ul>
-        </div>
-
-        <div class="glass-panel p-8 rounded-xl reveal hover:-translate-y-2 transition-all duration-300" data-delay="300">
-          <span class="material-symbols-outlined text-[#7bd0ff] mb-6 block" style="font-size:40px">terminal</span>
-          <h4 class="font-mono text-[11px] font-bold tracking-[0.2em] text-[#c9c6c5] uppercase mb-6">Tools</h4>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Git / GitHub</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Docker</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Postman</li>
-            <li class="flex items-center gap-3 text-sm text-[#c4c7c7] opacity-80"><span class="w-1.5 h-1.5 bg-[#7bd0ff] rounded-full flex-shrink-0 opacity-60"></span>Cursor IDE</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AI COMMAND CENTER -->
-  <section class="py-[100px] px-6 relative overflow-hidden" id="workflow">
-    <div class="absolute inset-0" style="background:radial-gradient(ellipse 60% 50% at 50% 100%,rgba(123,208,255,0.04) 0%,transparent 70%)"></div>
-    <div class="max-w-[1200px] mx-auto relative z-10">
-      <div class="flex flex-col md:flex-row items-end justify-between mb-14 gap-6 reveal">
-        <div>
-          <div class="sec-number mb-4">03 //</div>
-          <h3 class="font-display text-[32px] font-bold text-[#c9c6c5] tracking-[-0.02em] flex items-center gap-4 mb-4">
-            AI Command Center
-            <span class="inline-block w-2.5 h-2.5 bg-[#7bd0ff] rounded-full animate-pulse"></span>
-          </h3>
-          <p class="text-[#c4c7c7] opacity-70 max-w-xl">Augmenting the development lifecycle through an agentic, AI-first workflow for maximum velocity.</p>
-        </div>
-        <div class="font-mono text-[10px] text-[rgba(123,208,255,0.4)] tracking-[0.3em] uppercase border-b border-[rgba(123,208,255,0.15)] pb-2">V1.0.4 Neural Stack</div>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div class="glass-panel p-6 rounded-xl text-center group hover:-translate-y-2 transition-all duration-300 reveal relative overflow-hidden" data-delay="0">
-          <div class="absolute inset-0 bg-gradient-to-t from-[rgba(123,208,255,0.06)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="font-mono text-[9px] text-[rgba(123,208,255,0.5)] mb-2 tracking-[0.2em] uppercase">Prompting</div>
-          <div class="font-display font-bold text-[#c9c6c5] mb-1.5">ChatGPT</div>
-          <div class="text-[10px] text-[#8e9192] leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Strategic Mapping</div>
-        </div>
-        <div class="glass-panel p-6 rounded-xl text-center group hover:-translate-y-2 transition-all duration-300 reveal relative overflow-hidden" data-delay="80">
-          <div class="absolute inset-0 bg-gradient-to-t from-[rgba(123,208,255,0.06)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="font-mono text-[9px] text-[rgba(123,208,255,0.5)] mb-2 tracking-[0.2em] uppercase">Logic</div>
-          <div class="font-display font-bold text-[#c9c6c5] mb-1.5">Claude AI</div>
-          <div class="text-[10px] text-[#8e9192] leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Refinement</div>
-        </div>
-        <div class="glass-panel p-6 rounded-xl text-center group hover:-translate-y-2 transition-all duration-300 reveal relative overflow-hidden" data-delay="160">
-          <div class="absolute inset-0 bg-gradient-to-t from-[rgba(123,208,255,0.06)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="font-mono text-[9px] text-[rgba(123,208,255,0.5)] mb-2 tracking-[0.2em] uppercase">IDE</div>
-          <div class="font-display font-bold text-[#c9c6c5] mb-1.5">Cursor AI</div>
-          <div class="text-[10px] text-[#8e9192] leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Native Coding</div>
-        </div>
-        <div class="glass-panel p-6 rounded-xl text-center group hover:-translate-y-2 transition-all duration-300 reveal relative overflow-hidden" data-delay="240">
-          <div class="absolute inset-0 bg-gradient-to-t from-[rgba(123,208,255,0.06)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="font-mono text-[9px] text-[rgba(123,208,255,0.5)] mb-2 tracking-[0.2em] uppercase">Pilot</div>
-          <div class="font-display font-bold text-[#c9c6c5] mb-1.5">Copilot</div>
-          <div class="text-[10px] text-[#8e9192] leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Contextual</div>
-        </div>
-        <div class="glass-panel p-6 rounded-xl text-center group hover:-translate-y-2 transition-all duration-300 reveal relative overflow-hidden" data-delay="320">
-          <div class="absolute inset-0 bg-gradient-to-t from-[rgba(123,208,255,0.06)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="font-mono text-[9px] text-[rgba(123,208,255,0.5)] mb-2 tracking-[0.2em] uppercase">Design</div>
-          <div class="font-display font-bold text-[#c9c6c5] mb-1.5">Stitch AI</div>
-          <div class="text-[10px] text-[#8e9192] leading-tight opacity-0 group-hover:opacity-100 transition-opacity">UI Generation</div>
-        </div>
-        <div class="glass-panel p-6 rounded-xl text-center group hover:-translate-y-2 transition-all duration-300 reveal relative overflow-hidden" data-delay="400">
-          <div class="absolute inset-0 bg-gradient-to-t from-[rgba(123,208,255,0.06)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="font-mono text-[9px] text-[rgba(123,208,255,0.5)] mb-2 tracking-[0.2em] uppercase">Deploy</div>
-          <div class="font-display font-bold text-[#c9c6c5] mb-1.5">Vercel</div>
-          <div class="text-[10px] text-[#8e9192] leading-tight opacity-0 group-hover:opacity-100 transition-opacity">Hosting</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="py-[100px] px-6 max-w-[1200px] mx-auto" id="projects">
-    <div class="flex items-end justify-between mb-14 reveal flex-wrap gap-4">
-      <div>
-        <div class="sec-number mb-4">04 //</div>
-        <h3 class="font-display text-[32px] font-bold text-[#c9c6c5] tracking-[-0.02em]">High-Impact Deployments</h3>
-      </div>
-      <a href="https://github.com/harshvishwakarma24" target="_blank" class="font-mono text-[10px] tracking-[0.2em] text-[#7bd0ff] uppercase hover:opacity-70 transition-opacity">View All on GitHub ↗</a>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <!-- Project 1 -->
-      <div class="project-card glass-panel rounded-2xl overflow-hidden reveal hover:neon-glow transition-all duration-500" data-delay="100" style="border-color:rgba(68,71,72,0.15)">
-        <div class="project-img-wrap h-56" style="background:linear-gradient(135deg,#0a1628 0%,#1a2840 100%)">
-          <div class="w-full h-full flex items-center justify-center">
-            <span class="material-symbols-outlined text-[#7bd0ff] opacity-20" style="font-size:80px">favorite</span>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#101415] to-transparent"></div>
-        </div>
-        <div class="p-8">
-          <div class="flex gap-2 mb-5 flex-wrap">
-            <span class="skill-tag">React Native</span>
-            <span class="skill-tag">Django</span>
-            <span class="skill-tag">DRF</span>
-          </div>
-          <h4 class="font-display text-2xl font-bold text-[#c9c6c5] mb-4 group-hover:text-[#7bd0ff] transition-colors">Blood Donation App</h4>
-          <p class="text-[#c4c7c7] text-sm mb-8 leading-relaxed opacity-70">Real-time matching between donors and recipients with geolocation integration and secure health record synchronization.</p>
-          <a class="inline-flex items-center gap-2 text-[#7bd0ff] font-mono text-[10px] tracking-[0.15em] uppercase hover:gap-4 transition-all" href="https://github.com/harshvishwakarma24" target="_blank">
-            View Repository <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card glass-panel rounded-2xl overflow-hidden reveal hover:neon-glow transition-all duration-500" data-delay="200" style="border-color:rgba(68,71,72,0.15)">
-        <div class="project-img-wrap h-56" style="background:linear-gradient(135deg,#0d1f0a 0%,#1a3515 100%)">
-          <div class="w-full h-full flex items-center justify-center">
-            <span class="material-symbols-outlined text-[#7bd0ff] opacity-20" style="font-size:80px">receipt_long</span>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#101415] to-transparent"></div>
-        </div>
-        <div class="p-8">
-          <div class="flex gap-2 mb-5 flex-wrap">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Django</span>
-          </div>
-          <h4 class="font-display text-2xl font-bold text-[#c9c6c5] mb-4">Warranty Tracker</h4>
-          <p class="text-[#c4c7c7] text-sm mb-8 leading-relaxed opacity-70">Digital asset management system with expiry alerting, automated cron-job scheduling, and cloud storage integration.</p>
-          <a class="inline-flex items-center gap-2 text-[#7bd0ff] font-mono text-[10px] tracking-[0.15em] uppercase hover:gap-4 transition-all" href="https://github.com/harshvishwakarma24" target="_blank">
-            View Repository <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section class="py-[100px] reveal" style="background:rgba(11,15,16,0.6)">
-    <div class="px-6 max-w-[1200px] mx-auto mb-12">
-      <div class="sec-number mb-4 text-center">05 //</div>
-      <h3 class="font-mono text-[11px] font-bold tracking-[0.4em] text-[#7bd0ff] text-center uppercase mb-2">Verified Expertise</h3>
-    </div>
-    <div class="flex overflow-x-auto hide-scrollbar gap-6 px-6 pb-4 snap-x max-w-[1200px] mx-auto">
-      <div class="flex-none w-72 glass-panel cert-card rounded-xl p-8 snap-center">
-        <p class="font-mono text-[9px] tracking-[0.25em] text-[rgba(123,208,255,0.5)] mb-3 uppercase">Python Institute</p>
-        <h5 class="font-display text-base font-bold text-[#c9c6c5]">Certified Associate Python Programming</h5>
-      </div>
-      <div class="flex-none w-72 glass-panel cert-card rounded-xl p-8 snap-center">
-        <p class="font-mono text-[9px] tracking-[0.25em] text-[rgba(123,208,255,0.5)] mb-3 uppercase">Meta</p>
-        <h5 class="font-display text-base font-bold text-[#c9c6c5]">Front-End Developer Certificate</h5>
-      </div>
-      <div class="flex-none w-72 glass-panel cert-card rounded-xl p-8 snap-center">
-        <p class="font-mono text-[9px] tracking-[0.25em] text-[rgba(123,208,255,0.5)] mb-3 uppercase">Udemy</p>
-        <h5 class="font-display text-base font-bold text-[#c9c6c5]">Django REST Framework Masterclass</h5>
-      </div>
-      <div class="flex-none w-72 glass-panel cert-card rounded-xl p-8 snap-center">
-        <p class="font-mono text-[9px] tracking-[0.25em] text-[rgba(123,208,255,0.5)] mb-3 uppercase">HackerRank</p>
-        <h5 class="font-display text-base font-bold text-[#c9c6c5]">React (Basic) Skills Certificate</h5>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="py-[100px] px-6 max-w-[1200px] mx-auto reveal" id="contact">
-    <div class="glass-panel rounded-3xl p-8 md:p-16 relative overflow-hidden" style="border-color:rgba(123,208,255,0.08)">
-      <div class="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none -mr-48 -mt-48" style="background:radial-gradient(circle,rgba(123,208,255,0.06) 0%,transparent 70%)"></div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
-
-        <!-- Left -->
-        <div>
-          <div class="sec-number mb-6">06 //</div>
-          <h3 class="font-display text-[32px] font-bold text-[#c9c6c5] tracking-[-0.02em] mb-5">Initiate Transmission</h3>
-          <p class="text-[#c4c7c7] mb-12 leading-relaxed opacity-70">Ready to architect the next frontier of digital experiences? Let's discuss your vision.</p>
-
-          <div class="space-y-7">
-            <div class="flex items-center gap-5 group">
-              <div class="w-12 h-12 glass-panel flex items-center justify-center rounded-xl group-hover:bg-[rgba(123,208,255,0.08)] transition-all flex-shrink-0">
-                <span class="material-symbols-outlined text-[#7bd0ff]" style="font-size:20px">mail</span>
-              </div>
-              <div>
-                <p class="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] mb-1 uppercase">Email</p>
-                <a href="mailto:harshp24vishwakarma@gmail.com" class="text-[#c9c6c5] text-sm hover:text-[#7bd0ff] transition-colors">harshp24vishwakarma@gmail.com</a>
-              </div>
-            </div>
-            <div class="flex items-center gap-5 group">
-              <div class="w-12 h-12 glass-panel flex items-center justify-center rounded-xl group-hover:bg-[rgba(123,208,255,0.08)] transition-all flex-shrink-0">
-                <span class="material-symbols-outlined text-[#7bd0ff]" style="font-size:20px">location_on</span>
-              </div>
-              <div>
-                <p class="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] mb-1 uppercase">Location</p>
-                <p class="text-[#c9c6c5] text-sm">Maharashtra, India</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-5 group">
-              <div class="w-12 h-12 glass-panel flex items-center justify-center rounded-xl group-hover:bg-[rgba(123,208,255,0.08)] transition-all flex-shrink-0">
-                <span class="material-symbols-outlined text-[#7bd0ff]" style="font-size:20px">link</span>
-              </div>
-              <div>
-                <p class="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] mb-1 uppercase">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/harsh-vishwakarma-118072376" target="_blank" class="text-[#c9c6c5] text-sm hover:text-[#7bd0ff] transition-colors">linkedin.com/in/harsh-vishwakarma</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Form -->
-        <form
-          action="https://formsubmit.co/harshp24vishwakarma@gmail.com"
-          method="POST"
-          class="space-y-5"
-        >
-          <input type="hidden" name="_captcha" value="false"/>
-          <input type="hidden" name="_next" value="https://your-deployed-site.vercel.app"/>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div class="space-y-2">
-              <label class="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] uppercase block">Name</label>
-              <input class="w-full px-4 py-3 text-sm" name="name" placeholder="John Doe" type="text" required/>
-            </div>
-            <div class="space-y-2">
-              <label class="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] uppercase block">Email</label>
-              <input class="w-full px-4 py-3 text-sm" name="email" placeholder="john@example.com" type="email" required/>
-            </div>
-          </div>
-          <div class="space-y-2">
-            <label class="font-mono text-[9px] tracking-[0.25em] text-[#7bd0ff] uppercase block">Message</label>
-            <textarea class="w-full px-4 py-3 text-sm" name="message" placeholder="Describe your project vision..." rows="5" required></textarea>
-          </div>
-          <button type="submit" class="mag-btn w-full bg-[#7bd0ff] text-[#00354a] font-mono text-[11px] font-bold tracking-[0.2em] uppercase py-5 rounded-lg neon-glow hover:neon-glow-strong transition-all active:scale-95 hover:scale-[1.02]">
-            Send Transmission →
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer style="border-top:1px solid rgba(68,71,72,0.15);background:rgba(11,15,16,0.7)" class="py-12">
-  <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-    <div class="font-display text-2xl font-bold tracking-[-0.04em] text-[#c9c6c5]">HARSH<span class="text-[#7bd0ff]">.</span>DEV</div>
-    <p class="font-mono text-[10px] tracking-[0.2em] text-[#8e9192] uppercase">© 2025 Harsh Vishwakarma · Architecting the Future</p>
-    <div class="flex gap-8">
-      <a class="font-mono text-[10px] tracking-[0.15em] text-[#8e9192] hover:text-[#7bd0ff] transition-colors uppercase" href="https://github.com/harshvishwakarma24" target="_blank">GitHub</a>
-      <a class="font-mono text-[10px] tracking-[0.15em] text-[#8e9192] hover:text-[#7bd0ff] transition-colors uppercase" href="https://www.linkedin.com/in/harsh-vishwakarma-118072376" target="_blank">LinkedIn</a>
-    </div>
-  </div>
+<!-- Hero Section -->
+<section class="relative bg-white overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-2 gap-12 items-center py-16 md:py-24">
+<div class="z-10 order-2 md:order-1">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6">
+                    Your Blood is Someone's <span class="text-primary">Second Chance.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                    Every drop counts. Join our community of life-savers and help us ensure no patient goes without the life-saving care they deserve.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-primary-container transition-colors medical-glow">
+                        Schedule Donation
+                    </button>
+<button class="border-2 border-secondary text-secondary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all">
+                        Learn More
+                    </button>
+</div>
+</div>
+<div class="relative order-1 md:order-2 h-[400px] md:h-[600px] rounded-xl overflow-hidden">
+<img alt="Medical Professional" class="w-full h-full object-cover" data-alt="A professional and friendly medical doctor in a clean, modern clinic environment, smiling warmly at the camera. The setting features soft, clinical white lighting with subtle teal accents, reflecting an institutional trust and safety aesthetic. The composition is bright and high-key, using the Vital Assurance primary brand colors of crimson and teal to create a welcoming and professional medical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf1IOi7OspGnAjTHL76lC15mMrz9thdXjkBGR4yfqMmGT61ZXZPCQ_AOo0Q0M7wg0kf-VnoBHbT4l255Ok_GHGib4-OWJY8DzIMwCOryrCV9f_SFg221Rn6Ur-jVjwD_2P5EXFsuCAym69dCc8Yb1X5zFifu42x4gbh4JvhWs7pnfhBZaEAArMEci6A7Ybye3jVba48WQeqppqkTq3TRkK521eu9kaUJTRBbaCcYgQbUPmiQfmJoTg2ZL8g9CDOAvg6pNbJEGF5g5j">
+<div class="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Impact Section -->
+<section class="bg-surface-container-low py-section-gap transition-all duration-700 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md mb-4">The Impact of Your Gift</h2>
+<div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant text-center medical-glow transition-transform hover:-translate-y-1">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-fixed mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">favorite</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">1 Donation = 3 Lives Saved</h3>
+<p class="text-on-surface-variant">Your single contribution is separated into components that help multiple patients in need.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant text-center medical-glow transition-transform hover:-translate-y-1">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary-container mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">schedule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Every 3 Seconds</h3>
+<p class="text-on-surface-variant">Someone in our community requires a blood transfusion for surgery, trauma, or chronic illness.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant text-center medical-glow transition-transform hover:-translate-y-1">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-tertiary-fixed mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">volunteer_activism</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-2">100% Volunteer Based</h3>
+<p class="text-on-surface-variant">Our blood supply depends entirely on the generosity of people like you. Join our mission.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How Your Donation Works -->
+<section class="py-section-gap bg-white transition-all duration-700 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-20">
+<h2 class="font-headline-md text-headline-md mb-4">How Your Donation Works</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">The entire process is safe, simple, and takes less than an hour of your time.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12 relative">
+<!-- Step 1 -->
+<div class="relative text-center step-connector">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 font-bold">1</div>
+<h4 class="font-headline-sm text-headline-sm mb-4">Quick Health Screen</h4>
+<p class="text-on-surface-variant px-4">A private mini-physical to check your pulse, blood pressure, and hemoglobin levels to ensure you're fit to give.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative text-center step-connector">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 font-bold">2</div>
+<h4 class="font-headline-sm text-headline-sm mb-4">The Donation</h4>
+<p class="text-on-surface-variant px-4">The actual blood draw takes only about 8-10 minutes. Relax, listen to music, or chat with our staff.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative text-center">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 font-bold">3</div>
+<h4 class="font-headline-sm text-headline-sm mb-4">Refreshments</h4>
+<p class="text-on-surface-variant px-4">Enjoy free snacks and drinks for 15 minutes before heading out with the pride of knowing you saved a life.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section / Search -->
+<section class="py-section-gap transition-all duration-700 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="bg-primary-container rounded-3xl overflow-hidden p-12 md:p-20 relative">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternUnits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 text-center max-w-3xl mx-auto">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-8">Ready to make an impact?</h2>
+<p class="text-on-primary-container text-body-lg font-body-lg mb-12 opacity-90">Find a donation center or a mobile drive near you and schedule your appointment today.</p>
+<div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+<div class="flex-grow relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">location_on</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-lg border-none focus:ring-2 focus:ring-secondary text-on-surface font-label-md" placeholder="Enter Zip Code or City" type="text">
+</div>
+<button class="bg-white text-primary font-bold px-8 py-4 rounded-lg hover:bg-surface-bright transition-colors">
+                            Find Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-sm text-headline-sm font-bold text-primary mb-6">Witch</div>
+<p class="text-on-surface-variant max-w-sm font-body-md text-body-md">Witch ensures a safe and reliable blood supply for hospitals and clinics across the nation through community-driven volunteerism.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold mb-6 text-on-surface">Resources</h5>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Why Donate</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Donor Stories</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Health Benefits</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Medical Research</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold mb-6 text-on-surface">Support</h5>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Volunteer</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-12 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-label-md font-label-md text-on-surface-variant">© 2024 Witch. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+</div>
 </footer>
-
 <script>
-// ── 1. SPLASH ──────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const splash = document.getElementById('splash-screen');
-  const typedEl = document.getElementById('typed-text');
-  const roleEl = document.getElementById('splash-role-el');
-  const ctaEl = document.getElementById('splash-cta-el');
-  const nav = document.getElementById('main-nav');
+        // Micro-interactions for button scale
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
 
-  // Type animation
-  const fullText = 'HARSH VISHWAKARMA';
-  let i = 0;
-  const typeInterval = setInterval(() => {
-    typedEl.textContent += fullText[i];
-    i++;
-    if (i >= fullText.length) {
-      clearInterval(typeInterval);
-      setTimeout(() => { roleEl.classList.remove('opacity-0'); }, 300);
-      setTimeout(() => { ctaEl.classList.remove('opacity-0'); }, 1200);
-    }
-  }, 80);
+        // Simple scroll reveal effect for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-  let dismissed = false;
-  const enterSite = () => {
-    if (dismissed) return;
-    dismissed = true;
-    splash.style.transform = 'translateY(-100%)';
-    splash.style.opacity = '0';
-    document.body.classList.remove('overflow-hidden');
-    nav.classList.remove('opacity-0');
-    setTimeout(() => { splash.style.display = 'none'; }, 1000);
-  };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
 
-  window.addEventListener('scroll', enterSite, { once: true });
-  window.addEventListener('wheel', enterSite, { once: true });
-  window.addEventListener('touchstart', enterSite, { once: true });
-  ctaEl.addEventListener('click', enterSite);
-});
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
 
-// ── 2. PARTICLES ───────────────────────────────────────────
-const canvas = document.getElementById('particles-canvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
 
-function initParticles() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  particles = Array.from({ length: 120 }, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    size: Math.random() * 1.8 + 0.2,
-    speedX: (Math.random() - 0.5) * 0.4,
-    speedY: (Math.random() - 0.5) * 0.4,
-    alpha: Math.random() * 0.5 + 0.05
-  }));
-}
-
-function drawParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    p.x += p.speedX;
-    p.y += p.speedY;
-    if (p.x < 0) p.x = canvas.width;
-    if (p.x > canvas.width) p.x = 0;
-    if (p.y < 0) p.y = canvas.height;
-    if (p.y > canvas.height) p.y = 0;
-    ctx.globalAlpha = p.alpha;
-    ctx.fillStyle = '#7bd0ff';
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-    ctx.fill();
-  });
-  requestAnimationFrame(drawParticles);
-}
-
-window.addEventListener('resize', initParticles);
-initParticles();
-drawParticles();
-
-// ── 3. MOUSE GLOW ──────────────────────────────────────────
-const mouseGlow = document.getElementById('mouse-glow');
-window.addEventListener('mousemove', e => {
-  mouseGlow.style.left = e.clientX + 'px';
-  mouseGlow.style.top = e.clientY + 'px';
-});
-
-// ── 4. SCROLL REVEALS ──────────────────────────────────────
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const delay = parseInt(entry.target.getAttribute('data-delay') || 0);
-      setTimeout(() => entry.target.classList.add('active'), delay);
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-// ── 5. MAGNETIC BUTTONS ────────────────────────────────────
-document.querySelectorAll('.mag-btn, button, a').forEach(btn => {
-  btn.addEventListener('mousemove', e => {
-    const rect = btn.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) * 0.18;
-    const y = (e.clientY - rect.top - rect.height / 2) * 0.18;
-    btn.style.transform = `translate(${x}px, ${y}px)`;
-  });
-  btn.addEventListener('mouseleave', () => {
-    btn.style.transform = 'translate(0,0)';
-    btn.style.transition = 'transform 0.4s cubic-bezier(0.34,1.56,0.64,1)';
-  });
-});
-
-// ── 6. MOBILE MENU ─────────────────────────────────────────
-const mobileBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-mobileBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-});
-mobileMenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-});
-
-// ── 7. SMOOTH SCROLL ───────────────────────────────────────
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-  });
-});
-</script>
-</body>
-</html>
+</body></html>
