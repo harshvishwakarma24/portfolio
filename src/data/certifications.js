@@ -39,7 +39,7 @@ const certifications = [
     issuer: 'Matrix',
     title: 'HTML Certificate',
     image: '/certs/html-certificate.jpg',
-    file: '/certs/html-certificates.pdf'
+    file: '/certs/html.pdf'
   },
   {
     issuer: 'Skillified Mentor',
